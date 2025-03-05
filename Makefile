@@ -17,7 +17,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/domains-block-test
 	SECTION:=net
 	CATEGORY:=Network
-	DEPENDS:=
+	DEPENDS:=+kmod-tun
 	TITLE:=Quick check if domains is blocked
 	URL:=https://github.com/karen07/domains-block-test
 endef
