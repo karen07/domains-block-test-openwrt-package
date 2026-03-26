@@ -29,7 +29,7 @@ endef
 ifneq ("$(wildcard ../domains-block-test)", "")
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ../domains-block-test/* $(PKG_BUILD_DIR)/
+	$(CP) ../domains-block-test/. $(PKG_BUILD_DIR)/
 endef
 endif
 
