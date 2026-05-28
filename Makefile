@@ -3,13 +3,17 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=domains-block-test
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
-PKG_LICENSE:=GPL-3.0-or-later
 
 ifeq ("$(wildcard ../domains-block-test)", "")
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/karen07/domains-block-test.git
+PKG_SOURCE_URL:=https://github.com/karen07/domains-block-test
 PKG_SOURCE_VERSION:=v$(PKG_VERSION)
+PKG_MIRROR_HASH:=skip
 endif
+
+PKG_MAINTAINER:=Khachatryan Karen <karen0734@gmail.com>
+PKG_LICENSE:=AGPL-3.0-or-later
+PKG_LICENSE_FILES:=LICENSE
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
