@@ -1,20 +1,20 @@
 # domains-block-test OpenWrt package
 
-This repository contains the OpenWrt package definition for [domains-block-test](https://github.com/karen07/domains-block-test), a low-level TLS/SNI probing utility.
-
-The package installs the `domains-block-test` binary into `/usr/bin` and depends on `libpcap`. The tool performs packet capture and injection, so normal OpenWrt privilege requirements apply when it is executed.
-
-For development, the Makefile can build from a sibling `../domains-block-test` checkout. Otherwise OpenWrt fetches the tagged upstream source specified by `PKG_VERSION`.
+OpenWrt packaging for [domains-block-test](https://github.com/karen07/domains-block-test),
+a low-level TLS/SNI probe. It installs the utility and declares its packet-capture
+dependency.
 
 ## Описание
 
-Этот репозиторий содержит описание пакета OpenWrt для [domains-block-test](https://github.com/karen07/domains-block-test), низкоуровневой утилиты для проверки TLS/SNI.
+Пакет OpenWrt для [domains-block-test](https://github.com/karen07/domains-block-test) -
+низкоуровневой утилиты проверки TLS/SNI. Устанавливает утилиту и объявляет зависимость для
+захвата сетевых пакетов.
 
 Пакет устанавливает бинарный файл `domains-block-test` в `/usr/bin` и зависит от `libpcap`. Утилита выполняет захват и отправку пакетов, поэтому при запуске действуют обычные требования OpenWrt к привилегиям.
 
 При разработке Makefile может собирать исходники из соседнего каталога `../domains-block-test`. Если такого каталога нет, OpenWrt загружает версию исходников по тегу, заданному в `PKG_VERSION`.
 
-## Что находится в репозитории
+## Структура проекта
 
 - `domains-block-test/Makefile` - описание OpenWrt package;
 - `openwrt-build.env` - параметры пакета для общего CI;
